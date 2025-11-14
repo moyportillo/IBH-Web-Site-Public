@@ -1,0 +1,81 @@
+# ===========================
+#   GENERAL
+# ===========================
+node_modules/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+.env
+.env.*
+.DS_Store
+
+# ===========================
+#   VITE / FRONTEND
+# ===========================
+# Build result
+dist/
+build/
+
+# Local dev server cache
+vite.config.js.timestamp*
+vite.config.ts.timestamp*
+
+# Cache folders
+.cache/
+.vite/
+.svelte-kit/
+coverage/
+*.tsbuildinfo
+
+# Editor folders
+.idea/
+.vscode/
+
+# ===========================
+#   STRAPI / BACKEND
+# ===========================
+# Strapi build outputs
+build/
+.strapi-updater.json
+
+# Database SQLite (si usas SQLite en Strapi)
+*.db
+*.db-shm
+*.db-wal
+
+# Uploads (solo si NO quieres subir archivos subidos)
+# Si usas un provider externo como AWS S3, puedes ignorar uploads
+public/uploads/
+
+# Cache, tmp, etc.
+.tmp/
+.cache/
+exports/
+*.tmp
+
+# Environment
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# PM2
+.pids/
+
+# Logs
+logs/
+*.log
+log.txt
+
+# ===========================
+#   OPTIONAL
+# ===========================
+# Ignore generated API / types if needed
+types/generated/
+
+# Ignore local SSL
+ssl/
