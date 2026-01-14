@@ -1,5 +1,6 @@
 import type {ReactNode} from "react";
 import HeaderComponent from '@/pages/main/header';
+import { FooterComponent } from "./footer";
 
 interface Props {
     children?: ReactNode;
@@ -7,10 +8,13 @@ interface Props {
 
 const MainComponent = ({ children }: Props) => {
     return (
-        <section>
+        <>
             <HeaderComponent/>
+            <main>
             {children}
-        </section>);
+            </main>
+            <FooterComponent/>
+        </>);
 };
 
 export default MainComponent;
