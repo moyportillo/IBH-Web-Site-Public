@@ -1,41 +1,48 @@
 import {motion, useScroll, useTransform} from "framer-motion";
+import imgDoctrina from "@/assets/img/doctrina.jpeg";
+import imgCristocentrica from "@/assets/img/cristocentrica.jpg";
+import imgLectura from "@/assets/img/lectura.jpg";
+import imgOracion from "@/assets/img/oracion.jpg";
+import imgBiblia from "@/assets/img/biblia.jpg";
+import imgAlabanza from "@/assets/img/alabanza.jpg";
+import imgEspiritual from "@/assets/img/espiritual.jpg";
 
 const doctrinas = [
     {
         title: "Iglesia Cristocéntrica",
         description:
             "Creemos que Jesucristo es el centro de nuestra fe, vida y enseñanza, y que toda doctrina debe apuntar a Él.",
-        image: "/src/assets/img/cristocentrica.jpg",
+        image: imgCristocentrica,
     },
     {
         title: "Lectura Bíblica",
         description:
             "La Biblia es la Palabra inspirada de Dios y la base de nuestra enseñanza y práctica cristiana.",
-        image: "/src/assets/img/lectura.jpg",
+        image: imgLectura,
     },
     {
         title: "Oración",
         description:
             "La oración es esencial para mantener una relación viva con Dios y buscar Su voluntad.",
-        image: "/src/assets/img/oracion.jpg",
+        image: imgOracion,
     },
     {
         title: "Teología",
         description:
             "Estudiamos y enseñamos una teología bíblica sana, fiel a las Escrituras.",
-        image: "/src/assets/img/biblia.jpg",
+        image: imgBiblia,
     },
     {
-        title: "Música basada en la Palabra de Dios",
+        title: "Música",
         description:
             "Nuestra adoración musical glorifica a Dios y está alineada con la verdad bíblica.",
-        image: "/src/assets/img/alabanza.jpg",
+        image: imgAlabanza,
     },
     {
         title: "Vida Espiritual",
         description:
             "Promovemos una vida espiritual activa que refleje el carácter de Cristo en nuestro diario vivir.",
-        image: "/src/assets/img/espiritual.jpg",
+        image: imgEspiritual,
     },
 ];
 
@@ -56,7 +63,7 @@ const DoctrinaComponent = () => {
                 <motion.div
                     className="absolute inset-0 bg-cover bg-center"
                     style={{
-                        backgroundImage: "url('/src/assets/img/doctrina.jpeg')",
+                        backgroundImage: `url('${imgDoctrina}')`,
                         y: backgroundY,
                         scale: backgroundScale,
                     }}
@@ -118,7 +125,7 @@ const DoctrinaComponent = () => {
 
                                     {/* Contenido */}
                                     <motion.div
-                                        className="w-full md:w-1/2 p-8 rounded-2xl relative bg-white shadow-lg"
+                                        className="w-full md:w-1/2 p-8 rounded-2xl relative"
                                         initial={{opacity: 0, x: isLeft ? -60 : 60}}
                                         whileInView={{opacity: 1, x: 0}}
                                         viewport={{once: true}}
@@ -128,7 +135,7 @@ const DoctrinaComponent = () => {
                                         <span
                                             className="hidden md:block absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-5 h-5 bg-blue-900 rounded-full border-4 border-white"/>
 
-                                        <h3 className="text-2xl font-semibold mb-4 text-blue-900">
+                                        <h3 className="py-4 text-2xl font-semibold mb-4 text-blue-900">
                                             {item.title}
                                         </h3>
                                         <p className="text-gray-700 leading-relaxed">

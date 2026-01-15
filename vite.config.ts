@@ -4,8 +4,8 @@ import react from "@vitejs/plugin-react"
 import path from "path"
 
 export default defineConfig({
-    base: "/IBH-Web-Site-Public/",
     plugins: [react(), tailwindcss()],
+    base: "/IBH-Web-Site-Public/",
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src"),

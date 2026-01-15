@@ -8,6 +8,7 @@ import {
     NavigationMenuLink,
     navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu"
+import logo64ibh from "@/assets/icon/logo64x64.png";
 
 const HeaderComponent = () => {
     const [open, setOpen] = useState(false)
@@ -19,7 +20,7 @@ const HeaderComponent = () => {
                 {/* LOGO */}
                 <Link to="/" className="flex items-center gap-3">
                     <img
-                        src="/src/assets/icon/logo64x64.png"
+                        src={logo64ibh}
                         className="h-10 w-auto"
                         alt="Logo"
                     />

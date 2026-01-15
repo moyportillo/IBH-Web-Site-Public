@@ -5,35 +5,27 @@ import {
   FaHome,
   FaGlobeAmericas
 } from "react-icons/fa";
+import bgChurch from "@/assets/img/iglesia.jpg";
+import logoibh from "@/assets/img/logo.png";
 
 const PrincipalComponent = () => {
-  /* Scroll */
   const { scrollY } = useScroll();
 
-  /* Parallax */
   const backgroundY = useTransform(scrollY, [0, 600], [0, 200]);
   const backgroundScale = useTransform(scrollY, [0, 600], [1.05, 1]);
 
   return (
       <main className="w-full">
-
-        {/* HERO PARALLAX */}
         <section className="relative h-screen overflow-hidden">
-
-          {/* Imagen con parallax */}
           <motion.div
               className="absolute inset-0 bg-cover bg-center"
               style={{
-                backgroundImage: "url('/src/assets/img/iglesia.jpg')",
+                backgroundImage: `url(${bgChurch})`,
                 y: backgroundY,
                 scale: backgroundScale
               }}
           />
-
-          {/* Overlay */}
           <div className="absolute inset-0 bg-black/60 z-10" />
-
-          {/* Contenido */}
           <div className="relative z-20 flex items-center justify-center h-full">
             <motion.div
                 className="text-center text-white max-w-3xl px-6"
@@ -42,15 +34,13 @@ const PrincipalComponent = () => {
                 transition={{ duration: 0.9 }}
             >
               <img
-                  src="/src/assets/img/logo.png"
+                  src={logoibh}
                   alt="Logo Iglesia Bautista Hebron"
                   className="mx-auto mb-6 w-32 h-32"
               />
-
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 Iglesia Bautista Hebron
               </h1>
-
               <p className="text-lg md:text-xl">
                 Somos una iglesia comprometida con la enseñanza bíblica,
                 el amor al prójimo y el crecimiento espiritual de cada familia,
@@ -59,8 +49,6 @@ const PrincipalComponent = () => {
             </motion.div>
           </div>
         </section>
-
-        {/* HORARIOS */}
         <section className="py-20 bg-white">
           <div className="max-w-5xl mx-auto px-6 text-center">
             <motion.h2
@@ -71,7 +59,6 @@ const PrincipalComponent = () => {
             >
               Horarios de Servicio
             </motion.h2>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {[
                 { day: "Martes", text: "Culto de Oración – 7:00 PM" },
@@ -90,8 +77,6 @@ const PrincipalComponent = () => {
                   </motion.div>
               ))}
             </div>
-
-            {/* UBICACIÓN */}
             <motion.h2
                 className="text-3xl font-semibold mb-6"
                 initial={{ opacity: 0, y: 40 }}
@@ -100,7 +85,6 @@ const PrincipalComponent = () => {
             >
               Nuestra Ubicación
             </motion.h2>
-
             <motion.p
                 className="mb-8 text-gray-700"
                 initial={{ opacity: 0, y: 40 }}
@@ -111,7 +95,6 @@ const PrincipalComponent = () => {
               frente a gasolinera Shell Cerro Grande,
               Tegucigalpa, Honduras
             </motion.p>
-
             <motion.div
                 className="w-full h-[400px] rounded-2xl overflow-hidden shadow-2xl"
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -128,8 +111,6 @@ const PrincipalComponent = () => {
             </motion.div>
           </div>
         </section>
-
-        {/* MISIÓN */}
         <section className="py-20 bg-gray-100">
           <div className="max-w-6xl mx-auto px-6 text-center">
             <motion.h2
@@ -140,7 +121,6 @@ const PrincipalComponent = () => {
             >
               Nuestra Misión
             </motion.h2>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
@@ -187,7 +167,6 @@ const PrincipalComponent = () => {
             </div>
           </div>
         </section>
-
       </main>
   );
 };
