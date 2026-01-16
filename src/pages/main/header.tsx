@@ -37,6 +37,7 @@ const HeaderComponent = () => {
                                 { to: "/", label: "Inicio" },
                                 { to: "/doctrina", label: "Nuestra doctrina" },
                                 { to: "/ministerios", label: "Ministerios" },
+                                { to: "/predicacion", label: "Predicaciones" },
                                 { to: "/contacto", label: "Contacto" },
                             ].map((item) => (
                                 <NavigationMenuItem key={item.to}>

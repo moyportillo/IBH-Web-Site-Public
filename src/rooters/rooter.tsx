@@ -4,6 +4,7 @@ import PrincipalComponent from "@/pages/main/principal.tsx";
 import DoctrinaComponent from "@/pages/doctrina/doctrina.tsx";
 import MinisteriosComponent from "@/pages/ministerios/ministerio.tsx";
 import ContactoComponent from "@/pages/contacto/contacto.tsx";
+import PredicacionesComponent from "@/pages/predicaciones/predicacion.tsx";
 
 
 export const router = createHashRouter([
@@ -15,6 +16,7 @@ export const router = createHashRouter([
             { path: 'home', element: <PrincipalComponent /> },
             { path: 'doctrina', element: <DoctrinaComponent /> },
             { path: 'ministerios', element: <MinisteriosComponent /> },
+            { path: 'predicacion', element: <PredicacionesComponent /> },
             { path: 'contacto', element: <ContactoComponent /> },
             { path: '*', element: <Navigate to="home" /> },
         ],
