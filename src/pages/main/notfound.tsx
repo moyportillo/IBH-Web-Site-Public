@@ -61,7 +61,7 @@ const NotFoundComponent = () => {
 
                 {/* Botón de regreso */}
                 <motion.a
-                    href="/"
+                    href="/IBH-Web-Site-Public/home"
                     className="inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-blue-100 transition"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
