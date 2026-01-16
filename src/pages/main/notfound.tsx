@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { FaExclamationTriangle } from "react-icons/fa";
-import bg404 from "@/assets/img/espiritual.jpg"; // tu imagen de fondo para 404
+import bg404 from "@/assets/img/espiritual.jpg";
+import {Link} from "react-router-dom"; // tu imagen de fondo para 404
 
 const NotFoundComponent = () => {
     // Hook de scroll
@@ -60,15 +61,18 @@ const NotFoundComponent = () => {
                 </motion.p>
 
                 {/* Botón de regreso */}
-                <motion.a
-                    href="/IBH-Web-Site-Public/home"
-                    className="inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-blue-100 transition"
+                <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                    Volver al inicio
-                </motion.a>
+                    <Link
+                        to="/"
+                        className="inline-block bg-white text-blue-900 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-blue-100 transition"
+                    >
+                        Volver al inicio
+                    </Link>
+                </motion.div>
 
             </div>
         </main>
