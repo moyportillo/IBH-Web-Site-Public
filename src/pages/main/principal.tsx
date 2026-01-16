@@ -16,7 +16,7 @@ const PrincipalComponent = () => {
 
   return (
       <main className="w-full">
-        <section className="relative h-screen overflow-hidden">
+        <section className="mt-10  relative h-screen overflow-hidden">
           <motion.div
               className="absolute inset-0 bg-cover bg-center"
               style={{
@@ -41,7 +41,7 @@ const PrincipalComponent = () => {
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 Iglesia Bautista Hebron
               </h1>
-              <p className="text-lg md:text-xl">
+              <p className="text-md md:text-xl">
                 Somos una iglesia comprometida con la enseñanza bíblica,
                 el amor al prójimo y el crecimiento espiritual de cada familia,
                 caminando juntos en Cristo.
@@ -91,8 +91,8 @@ const PrincipalComponent = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
             >
-              Colonia Cerro grande, Zona 4, carretera a Olancho,
-              frente a gasolinera Shell Cerro Grande,
+              Cerro grande zona 5, carretera a Olancho,
+              frente a gasolinera Shell,
               Tegucigalpa, Honduras
             </motion.p>
             <motion.div
